@@ -6,7 +6,8 @@ const login = require("./login.route");
 
 const corsSetting = {
     credentials: true,
-    origin: "http://192.168.1.101:8081/",
+    origin: "*",
+    // origin: "http://10.0.0.181:8081/",
 };
 
 const registeredRoute = (app) => {

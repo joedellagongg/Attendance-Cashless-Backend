@@ -1,5 +1,5 @@
 const express = require("express");
-const nodemon = require("nodemon");
+const database = require("./mysql");
 const routes = require("./routes/master");
 const cors = require("cors");
 const app = express();

@@ -1,15 +1,17 @@
-const student = require("../models/student.model");
+const Authentication = require("../models/auth.models");
 
-exports.addStudent = async function (req, res) {
+exports.addAuthentication = async function (req, res) {
     const data = req.body;
+    console.log(data);
     try {
-        const result = await student.addStudent(data);
+        const result = await Authentication.addAuthentication(data);
         res.status(200).json({
-            message: "From: [ CONTROLLERS ], Data successfully added",
+            // message: "From: [ CONTROLLERS ], Data successfully added",
+            result,
         });
     } catch (error) {
         res.status(500).json({
-            message: "From: [ CONTROLLERS ], Error adding student",
+            message: "From: [ CONTROLLERS ], Error adding Authentication",
             error: error.message,
         });
     }
